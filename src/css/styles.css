@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     margin: 5rem 20vw;
     align-items: center;
-    padding-bottom: 90rem;
     overflow-x: hidden;
 }
 
@@ -74,10 +73,11 @@ img {
 }
 
 .gif {
-    width: 300px;
+    width: 280px;
     position: relative;
-    right: -45px;
+    right: -55px;
     animation: showUp 1.3s ease forwards;
+    overflow-x: hidden;
 }
 
 @keyframes appear{
@@ -215,14 +215,14 @@ img {
     }
 }
 
-.habilities_card:hover {
+.habilities_card:hover{
     border: solid 2px #EEB1B7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(5deg) !important;
 }
 
 .habilities_card__icon {
-    transform: scale(1.7);
+    transform: scale(1.7);  
     margin-bottom: 10px;
 }
 
@@ -230,6 +230,10 @@ img {
     color: #2f1c19e7;
     font-size: clamp(0.875rem, 0.625rem + 1vw, 1rem);
     font-weight: 600;
+}
+
+.habilities_card__text{
+    font-size: 0.8rem;
 }
 
 .fotita {
@@ -408,8 +412,7 @@ img {
 
 @media(max-width: 575px) {
     body {
-        margin: 5rem 3.2rem;
-        padding-bottom: 150rem;
+        margin: 5rem 2.5rem;
     }
 
     .box .gifs {
