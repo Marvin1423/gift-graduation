@@ -458,8 +458,8 @@ img {
         --height: 0px;
         --time: 0.7s;
         --delay: .2s;
-        top: 620px;
-        right: 100px;
+        top: 480px;
+        right: 150px;
         animation: appearFromRightGifs 5s ease forwards;
     }
 
@@ -476,8 +476,8 @@ img {
         --height: 0px;
         --time: 0.3s;
         --delay: .3s;
-        top: 610px;
-        left: 100px;
+        top: 480px;
+        left: 170px;
         animation: appearFromLeftGifs 6s ease forwards;
     }
 
