@@ -18,8 +18,9 @@ img {
     text-align: center;
 }
 
-.text:first-of-type {
+.text:nth-child(2) {
     color: #504745;
+    animation : appear 3s ease forwards;
 }
 
 .title {
@@ -29,21 +30,46 @@ img {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+    animation: shine 1s infinite alternate;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shine {
+    100% {
+        transform: scale(1.06);
+    }
 }
 
 .title-div {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+    animation: showUp 2s ease forwards;
 }
 
 .title-div img {
+    animation: showUp 2s ease forwards;
     width: 60px;
     filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(4694%) hue-rotate(346deg) brightness(94%) contrast(101%);
 }
 
 .title-div img:last-of-type {
     width: 45px;
+    animation: showUp 2s ease forwards;
     filter: brightness(0) saturate(100%) invert(58%) sepia(45%) saturate(5971%) hue-rotate(9deg) brightness(93%) contrast(101%);
 }
 
@@ -51,6 +77,18 @@ img {
     width: 350px;
     position: relative;
     right: -60px;
+    animation: showUp 1.3s ease forwards;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .box {
@@ -63,6 +101,18 @@ img {
     width: 120%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    animation: appear 1.5s ease forwards;
+}
+
+@keyframes showLittleUp{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .box-header {
@@ -77,6 +127,7 @@ img {
     font-size: clamp(1.25rem, 0.75rem + 2vw, 1.5rem);
     color: #2F1C19;
     position: relative;
+    animation: showLittleUp 3s ease forwards;
 }
 
 .mid-title-div {
@@ -85,7 +136,14 @@ img {
     gap: 5px;
 }
 
-.mid-title-div img {
+.mid-title-div img:first-of-type {
+    animation: showLittleUp 5s ease forwards;
+    width: 40px;
+    filter: brightness(0) saturate(100%) invert(74%) sepia(14%) saturate(4111%) hue-rotate(320deg) brightness(98%) contrast(99%);
+}
+
+.mid-title-div img:last-of-type{
+    animation: showLittleUp 3s ease forwards;
     width: 40px;
     filter: brightness(0) saturate(100%) invert(74%) sepia(14%) saturate(4111%) hue-rotate(320deg) brightness(98%) contrast(99%);
 }
@@ -112,6 +170,49 @@ img {
     padding: 15px 20px;
     gap: 5px;
     transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.habilities_card:nth-child(1) {
+    animation: appearFromRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.habilities_card:nth-child(2) {
+    animation: appearFromRight 2s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.habilities_card:nth-child(3) {
+    animation: appearFromRight 2.5s ease forwards;
+    animation-delay: 1.4s;
+}
+
+.habilities_card:nth-child(4) {
+    animation: appearFromRight 2.6s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.habilities_card:nth-child(5) {
+    animation: appearFromRight 2.7s ease forwards;
+    animation-delay: 1.8s;
+}
+
+.habilities_card:nth-child(6) {
+    animation: appearFromRight 2.8s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes appearFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .habilities_card:hover {
@@ -193,7 +294,7 @@ img {
     margin: 0 auto;
 }
 
-.gifs{
+.gifs {
     margin-top: 1rem;
     margin-inline: auto;
     position: relative;
@@ -207,13 +308,14 @@ img {
         height: 0;
         overflow: hidden;
     }
+
     to {
         height: 100%;
         overflow: visible;
     }
 }
 
-.gifs.active{
+.gifs.active {
     height: 100%;
     overflow: visible;
     animation: showGifs 1.5s forwards;
@@ -226,7 +328,7 @@ img {
     animation-delay: var(--delay);
 }
 
-@keyframes jump {   
+@keyframes jump {
     0% {
         transform: translateY(0) scaleY(1);
     }
@@ -252,8 +354,8 @@ img {
 
 .gifs img:nth-child(2) {
     --height: 60px;
-    --time: 0.8s;
-    --delay: .3s;
+    --time: 0.4s;
+    --delay: .1s;
 }
 
 .gifs img:nth-child(3) {
@@ -269,7 +371,7 @@ img {
 }
 
 .gifs img:nth-child(5) {
-    --height: 35px;
+    --height: 75px;
     --time: 0.7s;
     --delay: .2s;
 }
@@ -305,34 +407,37 @@ img {
 }
 
 @media(max-width: 575px) {
-    body{
+    body {
+        margin: 5rem 13vw;
         padding-bottom: 150rem;
     }
 
-    .box .gifs{
+    .box .gifs {
         display: flex;
         flex-direction: column;
+        position: relative;
+        left: -30px;
     }
 
-    @keyframes jump {   
-    0% {
-        transform: translateX(0) scaleX(1);
+    @keyframes jump {
+        0% {
+            transform: translateX(0) scaleX(1);
+        }
+
+        40% {
+            transform: translateX(calc(1 * var(--height))) scaleX(1.05);
+        }
+
+        60% {
+            transform: translateX(calc(1 * var(--height))) scaleX(0.95);
+        }
+
+        100% {
+            transform: translateX(0) scaleX(1);
+        }
     }
 
-    40% {
-        transform: translateX(calc(-1 * var(--height))) scaleX(1.05);
+    .box {
+        padding: 1.4rem;
     }
-
-    60% {
-        transform: translateX(calc(-1 * var(--height))) scaleX(0.95);
-    }
-
-    100% {
-        transform: translateX(0) scaleX(1);
-    }
-}
-
-.box{
-    padding: 0.7rem;
-}
 }
