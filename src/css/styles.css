@@ -74,9 +74,9 @@ img {
 }
 
 .gif {
-    width: 350px;
+    width: 300px;
     position: relative;
-    right: -60px;
+    right: -45px;
     animation: showUp 1.3s ease forwards;
 }
 
