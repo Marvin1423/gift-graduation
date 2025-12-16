@@ -408,7 +408,7 @@ img {
 
 @media(max-width: 575px) {
     body {
-        margin: 5rem 13vw;
+        margin: 5rem 3.2rem;
         padding-bottom: 150rem;
     }
 
