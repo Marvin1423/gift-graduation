@@ -440,7 +440,7 @@ img {
         --height: 55px;
         --time: 0.5s;
         --delay: .6s;
-        top: 400px;
+        top: 350px;
         left: 50px;
         animation: appearFromLeftGifs 7s ease forwards;
     }
@@ -449,7 +449,7 @@ img {
         --height: 30px;
         --time: .6s;
         --delay: .1s;
-        top: 400px;
+        top: 350px;
         right: 0px;
         animation: appearFromRightGifs 7s ease forwards;
     }
