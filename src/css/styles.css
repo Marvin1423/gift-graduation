@@ -485,7 +485,7 @@ img {
         --height: 0px;
         --time: 0.7s;
         --delay: .6s;
-        top: 950px;
+        top: 870px;
         right: 50px;
         animation: appearFromRightGifs 6s ease forwards;
     }
@@ -494,7 +494,7 @@ img {
         --height: 35px;
         --time: .8s;
         --delay: .1s;
-        top: 950px;
+        top: 870px;
         left: 50px;
         animation: appearFromLeftGifs 4s ease forwards;
     }
