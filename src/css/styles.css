@@ -441,7 +441,7 @@ img {
         --time: 0.5s;
         --delay: .6s;
         top: 350px;
-        left: 50px;
+        left: 10px;
         animation: appearFromLeftGifs 7s ease forwards;
     }
 
@@ -458,7 +458,7 @@ img {
         --height: 0px;
         --time: 0.7s;
         --delay: .2s;
-        top: 480px;
+        top: 500px;
         right: 80px;
         animation: appearFromRightGifs 5s ease forwards;
     }
@@ -476,7 +476,7 @@ img {
         --height: 0px;
         --time: 0.3s;
         --delay: .3s;
-        top: 480px;
+        top: 495px;
         left: 80px;
         animation: appearFromLeftGifs 6s ease forwards;
     }
