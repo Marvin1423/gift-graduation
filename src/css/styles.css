@@ -450,7 +450,7 @@ img {
         --time: .6s;
         --delay: .1s;
         top: 400px;
-        right: 50px;
+        right: 0px;
         animation: appearFromRightGifs 7s ease forwards;
     }
 
@@ -485,7 +485,7 @@ img {
         --height: 0px;
         --time: 0.7s;
         --delay: .6s;
-        top: 1050px;
+        top: 950px;
         right: 50px;
         animation: appearFromRightGifs 6s ease forwards;
     }
@@ -494,7 +494,7 @@ img {
         --height: 35px;
         --time: .8s;
         --delay: .1s;
-        top: 1050px;
+        top: 950px;
         left: 50px;
         animation: appearFromLeftGifs 4s ease forwards;
     }
@@ -532,6 +532,7 @@ img {
 
     .box .gifs.active {
         display: flex;
+        overflow-x: hidden;
     }
 
     @keyframes jump {
